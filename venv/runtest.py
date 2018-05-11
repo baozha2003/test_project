@@ -5,12 +5,12 @@ import time
 from HTMLTestRunner_PY3 import HTMLTestRunner
 
 # 定义测试用例的目录为当前目录
-test_dir = './test_case/'
+test_dir = '../test_case/'
 discover = unittest.defaultTestLoader.discover(test_dir, pattern='test*.py')
 
 if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d %H_%M_%S")
-    filename = './report/' + now + 'result.html'
+    filename = '../report/' + now + 'result.html'
     runner = unittest.TextTestRunner()
 
     # 定义报告存放路径
