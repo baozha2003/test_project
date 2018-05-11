@@ -1,0 +1,1 @@
+python runtest.py >> report/log.txt 2>&1
