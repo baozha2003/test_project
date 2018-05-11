@@ -1,8 +1,13 @@
 import os
 
-#定义文件目录
-result_dir = 'C:\\Users\\ldp\\PycharmProjects\\test_project\\venv\\report'
+# 定义文件目录
+result_dir = '../report'
 
-list = os.listdir(result_dir)
+lists = os.listdir(result_dir)
 
-#重新按时间对目录下的文件进行排序
+# 重新按时间对目录下的文件进行排序
+lists.sort(key=lambda fn: os.path.getatime(result_dir + "\\" + fn))
+
+print(("最新的文件为：" + lists[-1]))
+file = os.path.join(result_dir, lists[-1])
+print(file)
