@@ -7,6 +7,7 @@ import time
 
 class MyTest(unittest.TestCase):
     """溯源系统测试"""
+
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
@@ -29,5 +30,5 @@ class MyTest(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-        if __name__ == "__main__":
-            unittest.main()
+if __name__ == "__main__":
+    unittest.main()
