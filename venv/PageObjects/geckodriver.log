@@ -15,3 +15,23 @@ Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpat
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1527493361100	geckodriver	INFO	geckodriver 0.20.1
+1527493361112	geckodriver	INFO	Listening on 127.0.0.1:59689
+1527493364125	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ldp\\AppData\\Local\\Temp\\rust_mozprofile.1H7gT4THJhfU"
+Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpaths.vrpath
+1527493364719	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ldp\AppData\Local\openvr\openvrpaths.vrpath
+1527493366060	Marionette	INFO	Listening on port 59705
+1527493366150	Marionette	WARN	TLS certificate errors will be ignored for this session
+1527493366283	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 125"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:125 < onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:141 < _middleware/</<()@resource://activity-stream/lib/Store.jsm:51 < Store/this[method]()@resource://activity-stream/lib/Store.jsm:30 < uninit()@resource://activity-stream/lib/Store.jsm:153 < uninit()@resource://activity-stream/lib/ActivityStream.jsm:278 < uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:80 < shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:196 < callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4406 < observe()@resource://gre/modules/addons/XPIProvider.jsm:2270 < GeckoDriver.prototype.quit()@driver.js:3381 < despatch()@server.js:560 < execute()@server.js:534 < onPacket/<()@server.js:509 < onPacket()@server.js:508 < _onJSONObjectReady/<()@transport.js:500
+Promise rejected after context unloaded: Message manager disconnected
+[Parent 32300, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 34500, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 34500, Chrome_ChildThread] WARNING: pipe error: 1[Child 15404, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15404, Chrome_Chil*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

@@ -68,5 +68,6 @@ class LoginPage(Page):
             # 关闭浏览器窗口
             driver.quit()
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()

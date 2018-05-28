@@ -8,6 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 import smtplib
+import datetime
 
 
 # 定义发送邮件
@@ -21,6 +22,8 @@ def send_mail(file_new):
     sender = 'baozha2003@163.com'
     # 接收邮箱
     receiver = '185143666@qq.com'
+    #今天日期
+    today = str(datetime.date.today())
 
     sendfile = open(file_new, 'rb')
     mail_body = sendfile.read()
@@ -43,7 +46,7 @@ def send_mail(file_new):
     att = MIMEText(mail_body, 'base64', 'utf-8')
     att["Content-Type"] = "application/octet-stream"
     # 这里的filename可以任意写，写什么名字，邮件中显示什么名字
-    att["Content-Disposition"] = 'attachment;filename="2018-05-11 15_25_08result.html"'
+    att["Content-Disposition"] = 'attachment;filename="Report.html"'
     msg.attach(att)
 
     # 链接发送邮件
