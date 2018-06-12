@@ -1,5 +1,5 @@
 from time import sleep
-from .screenshotimg import insert_img
+from venv.sy54315.model.function import insert_img
 import unittest
 from .driver import browser
 

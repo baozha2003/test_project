@@ -11,8 +11,8 @@ class Login(object):
     def login(self, user_name, pwd):
         driver = webdriver.Firefox()
         driver.get("http://sytest.54315.com/")
-        driver.find_element_by_class_name("user").clear()
-        driver.find_element_by_class_name("user").send_keys(user_name)
+        driver.find_element(By.NAME, 'mobile').clear()
+        driver.find_element(By.NAME, 'mobile').send_keys(user_name)
         driver.find_element_by_class_name("password").clear()
         driver.find_element_by_class_name("password").send_keys(pwd)
         driver.find_element_by_class_name("password").submit()

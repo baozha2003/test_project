@@ -1,8 +1,8 @@
 from time import sleep
-import unittest, random, sys
-from .model import myunit, screenshotimg
+import sys
+from .model import function
+from venv.sy54315.model import myunit
 from .page_object.login_page import LoginPage
-from .page_object.mail_page import MailPage
 
 sys.path.append('./model')
 sys.path.append('./page_object')
@@ -21,4 +21,4 @@ class LoginTest(myunit.MyTest):
         # po2 = MailPage(self.driver)
         # print(po2.login_success_user())
         # self.assertEqual()
-        screenshotimg.insert_img(self.driver, "success.jpg")
+        # function.insert_img(self.driver, "success.jpg")

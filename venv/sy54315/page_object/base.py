@@ -7,7 +7,7 @@ import unittest
 # 基本层
 class Base(object):
 
-    def __int__(self, driver, base_url='http://sytest.54315.com'):
+    def __intt__(self, driver, base_url='http://sytest.54315.com'):
         self.driver = driver
         driver.base_url = 'http://sytest.54315.com'
         self.timeout = 30

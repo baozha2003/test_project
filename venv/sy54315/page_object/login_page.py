@@ -6,7 +6,7 @@ from .base import Base
 
 class LoginPage(Base):
     url = '/'
-    login_username_text_loc = (By.NAME, 'user')
+    login_username_text_loc = (By.NAME, 'mobile')
     login_password_text_loc = (By.NAME, 'password')
     login_button_loc = (By.ID, 'login')
 

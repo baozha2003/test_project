@@ -80,7 +80,7 @@ if __name__ == '__main__':
     fp = open(filename, 'wb')
     # 定义测试报告
     runner = HTMLTestRunner(stream=fp,
-                            title='百度搜索测试报告',
+                            title='测试报告',
                             description='用例执行情况：')
 
     runner.run(discover)  # 运行测试用例

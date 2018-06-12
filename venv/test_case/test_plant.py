@@ -5,6 +5,7 @@ from selenium.webdriver.support.select import Select
 import unittest
 from time import sleep
 import datetime
+from selenium.webdriver.common.by import By
 
 
 class MyTest(unittest.TestCase):
@@ -49,7 +50,8 @@ class MyTest(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="dataForm"]/ul/li[4]/input[2]').click()
         sleep(1)
         driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[2]/td[1]/input').click()
-        Select(driver.find_element_by_name("manager")).select_by_index(5)
+        # Select(driver.find_element_by_name("manager")).select_by_index(5)
+        Select(driver.find_element(By.NAME,"manager")).select_by_index(5)
         driver.find_element_by_id('Add').click()
         alter = driver.find_element_by_xpath('/html/body/div[2]/div[2]/p').text
         print(alter)

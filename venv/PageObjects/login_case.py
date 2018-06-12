@@ -1,8 +1,7 @@
 from time import sleep
-import unittest, random, sys
-from . import myunit, function
-from .login_page import LoginPage
-from .mail_page import MailPage
+import sys
+from venv.PageObjects.model import function, myunit
+from venv.PageObjects.page_obj.login_page import LoginPage
 
 sys.path.append('./model')
 sys.path.append('./page_obj')
@@ -10,15 +9,10 @@ sys.path.append('./page_obj')
 
 class LoginTest(myunit.MyTest):
 
-    def test_login_user_pwd_null(self):
-        """用户名、密码为空登录"""
-
+    def test_login_user_pwd_success(self):
         po = LoginPage(self.driver)
         po.open()
         user = "13727086330"
         po.login_action(user, "qwe123")
         sleep(2)
-        # po2 = MailPage(self.driver)
-        # print(po2.login_success_user())
-        # self.assertEqual()
-        function.insert_img(self.driver, "success.jpg")
+        function.insert_img(self.driver, "success.png")
