@@ -87,4 +87,4 @@ if __name__ == '__main__':
     fp.close()  # 关闭报告文件
     new_report = new_report(test_report)
 
-    # send_mail(new_report)
+    send_mail(new_report)
