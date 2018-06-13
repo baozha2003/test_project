@@ -2,6 +2,7 @@ from configparser import ConfigParser
 import time, sys
 import codecs
 import os
+import argparse
 
 
 class ReadConfig(object):
@@ -13,7 +14,7 @@ class ReadConfig(object):
         print("加载配置文件...")
         # 补充文件路径，获得config.ini的绝对路径，默认为主程序当前目录
         # path = os.path.join(os.getcwd(), config_file)
-        path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))+ '\%s' % config_file
+        path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))) + '\%s' % config_file
         print(path)
 
         cp = ConfigParser()
@@ -24,13 +25,24 @@ class ReadConfig(object):
             print(u'打开配置文件"%s"失败, 请先创建或者拷贝一份配置文件config.ini' % (config_file))
             input('Press any key to continue')
             sys.exit()
-        # 登录名
+        # 接收邮件地址
         self.receive_email = cp.get("mail", "receive_email")
-        # print(self.receive_email)
+        print(self.receive_email)
         self.receive_emails = self.receive_email.split(',')
-        # print(self.receive_emails)
+        print(self.receive_emails)
         self.chromedriver_location = cp.get("chromedriver", "chromedriver_location")
-        # print(self.chromedriver_location)
+        print(self.chromedriver_location)
+
+    def loadConfig(self):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('-c', '--config', help='Specify config file, use absolute path')
+        args = parser.parse_args()
+        if args.config:
+            # 使用指定的配置文件
+            self.readConfig(args.config)
+        else:
+            # 使用默认的配置文件config.ini
+            self.readConfig()
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@ import sys
 from venv.PageObjects.model import function, myunit
 from venv.PageObjects.page_obj.login_page import LoginPage
 from venv.PageObjects.page_obj.plant_page import PlantPage
-from .page_obj.addplant_page import AddPlantPage
+from venv.PageObjects.page_obj.addplant_page import AddPlantPage
 
 sys.path.append('./model')
 sys.path.append('./page_obj')
