@@ -20,5 +20,5 @@ class LoginTest(myunit.MyTest):
         sleep(2)
         # po2 = MailPage(self.driver)
         # print(po2.login_success_user())
-        # self.assertEqual()
+        self.assertEqual()
         # function.insert_img(self.driver, "success.jpg")
