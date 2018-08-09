@@ -16,10 +16,16 @@ above = driver.find_element_by_xpath("/html/body/header/ul/li[2]/i[1]")
 ActionChains(driver).move_to_element(above).perform()
 # driver.find_element_by_xpath('/html/body/header/ul/li[2]').click()
 element = WebDriverWait(driver, 5, 0.5).until(
-                      EC.presence_of_element_located((By.XPATH, "/html/body/header/ul/li[2]/p/a[2]"))
-                      )
+    EC.presence_of_element_located((By.XPATH, "/html/body/header/ul/li[2]/p/a[1]"))
+)
 element.click()
-sleep(5)
+# print(driver.current_window_handle)  # 输出当前窗口句柄（百度）
+handles = driver.window_handles  # 获取当前窗口句柄集合（列表类型）
+# print(handles)
+# sleep(2)
+driver.switch_to_window(handles[1])
+driver.find_element_by_id('Confirm').click()
+# driver.find_elements_by_class_name()
 # cookies = driver.get_cookies()
 # ucsid = cookies[0]['value']
 # print(ucsid)
