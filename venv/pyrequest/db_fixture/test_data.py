@@ -1,15 +1,19 @@
-import sys
-import time
-
+import sys, time
 sys.path.append('../db_fixture')
-from venv.MysqlStu.mysql_db import DB
+try:
+    from mysql_db import DB
+except ImportError:
+    from .mysql_db import DB
 
 # 定义过去时间
 past_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()-100000))
 
 # 定义将来时间
 future_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()+10000))
-# 创建测试数据
+
+
+
+# create data
 datas = {
     'sign_event':[
         {'id':1,'name':'红米Pro发布会','`limit`':2000,'status':1,'address':'北京会展中心','start_time':future_time},
@@ -25,14 +29,11 @@ datas = {
     ],
 }
 
-#将数据插入表
-def init_data():
-    db = DB()
-    for table ,data in datas.items():
-        db.clear()
-        for d in data:
-            db.insert(table,d)
-    db.close()
 
-if __name__ == '__main__':
+# Inster table datas
+def init_data():
+    DB().init_data(datas)
+
+
+if __name__ == "__main__":
     init_data()
